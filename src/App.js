@@ -1,4 +1,6 @@
 import './App.css';
+import Component from './Component';
+
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
         </p>
+        <p>Hello Divya, Hi Ritish</p>
         <p className="small">
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -21,7 +24,9 @@ function App() {
             Learn React
           </a>
         </p>
+        <Component />
       </header>
+     
     </div>
   );
 }
