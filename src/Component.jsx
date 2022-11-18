@@ -35,7 +35,8 @@ export default class Component extends React.Component {
     render() {
         return (
         <div>
-            From component {this.state.value}... new update v2.0
+            From component {this.state.value}... new update v2.0...
+            Jingalala
         </div>
         );
     }
