@@ -1,7 +1,7 @@
 {
   "name": "web-application",
   "version": "0.1.0",
-  "homepage": "https://gokulramanan.me/web-application",
+  "homepage": "https://gokulramanan.me/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
