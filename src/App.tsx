@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './NavBar/NavBar';
 import { ConfigProvider } from 'antd';
 import { Layout } from 'antd';
+import Container from './Container/Container';
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -22,6 +23,7 @@ function App() {
         <Content>
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
+            <Container />
           </header>
         </Content>
         <Footer>Footer</Footer>
