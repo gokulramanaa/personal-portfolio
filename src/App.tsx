@@ -5,6 +5,7 @@ import NavBar from './NavBar/NavBar';
 import { ConfigProvider } from 'antd';
 import { Layout } from 'antd';
 import Container from './Container/Container';
+import { Outlet } from 'react-router-dom';
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -23,7 +24,7 @@ function App() {
         <Content>
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <Container />
+            <Outlet />
           </header>
         </Content>
         <Footer>Footer</Footer>
