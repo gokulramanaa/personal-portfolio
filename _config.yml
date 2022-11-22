@@ -2,9 +2,8 @@
 title               : Gokulramanan Soundararajan
 description         : >-
                       I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
-baseurl             : "/"                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+                      stay hungry and foolish.
+baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : gokulramanaa/gokulramanaa     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
 open_new_tab        : false                             # Opens external URLs in new tab (works for posts, projects and navbar only)
@@ -109,5 +108,6 @@ exclude:
   - LICENSE
   - "*.log"
   - node_modules
-  - dev-web-appplication
+  - dev-*
+  - node_modules*
   

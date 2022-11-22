@@ -1,15 +1,15 @@
 # Get Icons  from : https://fontawesome.com/icons
 # Get Colors from : https://brandcolors.net/
 
-behance:
-  url   : https://www.behance.net/
-  icon  : fab fa-behance
-  color : 1769ff
+# behance:
+#   url   : https://www.behance.net/
+#   icon  : fab fa-behance
+#   color : 1769ff
 
-dribbble:
-  url   : https://dribbble.com/
-  icon  : fab fa-dribbble
-  color : 444444
+# dribbble:
+#   url   : https://dribbble.com/
+#   icon  : fab fa-dribbble
+#   color : 444444
 
 email:
   url   : "mailto:"
