@@ -1,8 +1,8 @@
 ### Site Settings ###
 title               : Gokulramanan Soundararajan
 description         : >-
-                      I turn coffee :coffee: into code,
-                      stay hungry and foolish.
+                      I burn coffee :coffee: into code.
+quote               : stay hungry stay foolish - Steve Jobs
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : gokulramanaa/gokulramanaa     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : gokulramanaa/portfolYOU
@@ -110,4 +110,5 @@ exclude:
   - node_modules
   - dev-*
   - node_modules*
+  - notes
   

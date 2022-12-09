@@ -133,3 +133,5 @@ dev-*/node_modules*
 .vscode*
 .github*
 .devcontainer*
+
+notes/*
