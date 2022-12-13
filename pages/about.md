@@ -21,6 +21,7 @@ As a result, I landed myself in a Summer Internship with State Street Corporatio
 {% include about/skills.html title="Tools" source=site.data.other-skills %}
 </div>
 
+
 ## Education
 <div class="row">
 {% include about/education.html %}
