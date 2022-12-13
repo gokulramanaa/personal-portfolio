@@ -1,46 +1,44 @@
-- title: Software Engineer, Oracle Cloud Infrastructure, Seattle, USA
+- title: Software Development Engineer
+  college: Oracle Cloud Infrastructure, Seattle, USA
   from: Octboer, 2019
   to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: 
+    • Full Stack: Developing Atlas - a Full Stack application for Oracle Cloud Infrastructure using Python, Elastic search and ReactJS. This acts as a control tower system that provides visual of current, historical, and future state of inventory, from maps of data halls and rack positions down to component details
 
-- title: Software Engineer(Data), Tempus Inc, Chicago, USA
+- title: Software Engineer(Data)
+  college: Tempus Inc, Chicago, USA
   from: Feburary, 2019
   to: October, 2019
   description:
-  courses:
-  • Data Pipeline: Creating Directed Acyclic Graphs (DAG), using Apache Airflow, for moving structured and unstructured data from SQL, Flat Files, and API sources then load it into Amazon Redshift clusters for delivery.
-  • Full Stack: Developed and enhanced new features for the Lens - a Full Stack Web Application which is used by more than 300 doctors and Pharma customers for data driven cancer treatment.
-  • Extract Transform Load: Automating legacy ETL scripts to run, validate, and perform with lesser manual intervention. Developing alerting and monitoring hooks using Python, Shell scripting for various stages in the ETL pipeline and infrastructure and visualize it on the Splunk dashboards. Configured alerts to be sent from Splunk to Slack and emails.
-  • Agile Development: Breaking the user stories as small tasks and updating status in everyday stand up and working with Product Owner, Scrum Master within the agile environment and following Scrum approach of delivering user stories using Jira and Confluence.
+    • Data Pipeline: Creating Directed Acyclic Graphs (DAG), using Apache Airflow, for moving structured and unstructured data from SQL, Flat Files, and API sources then load it into Amazon Redshift clusters for delivery.
+    • Full Stack: Developed and enhanced new features for the Lens - a Full Stack Web Application which is used by more than 300 doctors and Pharma customers for data driven cancer treatment.
+    • Extract Transform Load: Automating legacy ETL scripts to run, validate, and perform with lesser manual intervention. Developing alerting and monitoring hooks using Python, Shell scripting for various stages in the ETL pipeline and infrastructure and visualize it on the Splunk dashboards. Configured alerts to be sent from Splunk to Slack and emails.
+    • Agile Development: Breaking the user stories as small tasks and updating status in everyday stand up and working with Product Owner, Scrum Master within the agile environment and following Scrum approach of delivering user stories using Jira and Confluence.
 
-- title: Graduate Intern, State Street, New Jersey, USA
+- title: Graduate Intern
+  college: State Street, New Jersey, USA
   from: June, 2018
   to: December, 2018
   description:
-  courses:
     • Machine Learning: Designed an intricate algorithm based on deep-dive statistical analysis and predictive modeling that is used to strengthen the quality of client’s transaction data and server’s logs transferred between sources; identified 99% of non-matching duplicates.
     • Big Data Application: Moved 2M rows, on near real time basis (every 5 Minutes), from RDBMS to HDFS using Sqoop. Used Spark to transform, clean, and analyse data in Python api. Visualized the interactive graphs and analysis reports in React web application; enabled $0.5M savings. 
     • Cluster Analysis: Working on a Cluster analysis to identify similar kind of tickets raised on ticket management tool. This will reduce the life cycle and waiting period for many tickets and clients.
     • UNIX Shell: Automated more than 10 dev-ops tasks to interactive shell scripts, to reduce manual effort and to avoid unforeseen errors.
 
-- title: Software Engineer, Robert Bosch Global Software Technologies, Coimbatore, India
+- title: Software Engineer
+  college: Robert Bosch Global Software Technologies, Coimbatore, India
   from: July, 2015
   to: August, 2017
   description: 
-  courses:
     • Extract Transform Load: Converted manual tasks to a fully automated framework to extract data from the database, clean, validate, and generate report; accomplished 75% manual effort reduction from 24 to 6 working hours.
     • Automation: Volunteered and developed more than 5 automation scripts and application dashboards to reduce the team members efforts, as a result improved the team’s efficiency by 20%.
     • Data Processing: Analysed, processed and generated metrics report from complex datasets using advanced querying, visualization and analytics tools; led up to 10% business profit enhancement.
 
-- title: Application Developer, IBM, Chennai, India
+- title: Application Developer
+  college: IBM, Chennai, India
   from: August, 2013
   to: July, 2015
   description: 
-  courses:
     • AD Tools: Designed and created a Forex settlement service development framework for CLS Bank, which is used by more than 300 developers and testers. Also worked on built compilation and release deployment.
     • Application Development: Achieved highest application performance by enhancing an automation framework in shell script and reduced daily crashes from 10 to at most 4 per day.
     • Testing and Debug: Individually solved more than 150 software bugs and recognized with deep skill award for in-depth knowledge.
