@@ -1,11 +1,30 @@
-- name: HTML5/CSS3
-  percentage: 90
-  color: danger
-
-- name: Go
-  percentage: 80
-  color:
-
 - name: Python
   percentage: 95
-  color: secondary
+  level : Advanced
+  color: primary
+
+- name: Java
+  percentage: 90
+  level : Advanced
+  color: info
+
+- name: JavaScript
+  percentage: 90
+  color: info
+
+- name: React JS
+  percentage: 80
+  color: primary
+
+- name: HTML5/CSS3
+  percentage: 90
+  level : Advanced
+  color: primary
+
+- name: Unix Shell Scripting
+  percentage: 90
+  color: Info
+
+- name: Database (SQL & NOSQL)
+  percentage: 90
+  color: info
