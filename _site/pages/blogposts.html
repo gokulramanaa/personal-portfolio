@@ -21,11 +21,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Do not go gentle into that good night">
+  <meta property="og:title" content="Blog Posts">
   <meta property="og:description" content="I burn coffee :coffee: into code.">
   <meta property="og:image" content="https://i.imgur.com/nhHg5J3.jpg">
 
-  <title>Do not go gentle into that good night</title>
+  <title>Blog Posts</title>
   <meta name="description" content="I burn coffee :coffee: into code.">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -60,11 +60,13 @@
 
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-<a class="nav-item nav-link " href="/web-app/">Tools</a>
+<a class="nav-item nav-link active" href="/pages/blogposts.html">Blog Posts</a>
+
+      <a class="nav-item nav-link " href="/web-app/">Tools</a>
 
       <a class="nav-item nav-link " href="/projects/">Projects</a>
 
-      <a class="nav-item nav-link active" href="/blog/">Blog</a>
+      <a class="nav-item nav-link " href="/blog/">Blog</a>
 
       <a class="nav-item nav-link " href="/about/">About</a>
 
@@ -77,49 +79,63 @@
 </nav>
 
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>Do not go gentle into that good night</b></h1>
+  <!-- Simple-Jekyll-Search https://github.com/christian-fei/Simple-Jekyll-Search -->
 
-<p class="post-metadata text-muted">
-  17 April 2016 -  
-  <b>less than 1 min read time</b>
-
-  <br>Tags: 
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#poetry">
-      <span class="tag badge badge-pill text-primary border border-primary">Poetry</span>
-    </a>
-    </p>
-
-<p>Do not go gentle into that good night,<br>
-Old age should burn and rave at close of day;<br>
-Rage, rage against the dying of the light.</p>
-
-<p>Though wise men at their end know dark is right,<br>
-Because their words had forked no lightning they<br>
-Do not go gentle into that good night.</p>
-
-<p>Good men, the last wave by, crying how bright<br>
-Their frail deeds might have danced in a green bay,<br>
-Rage, rage against the dying of the light.</p>
-
-<p>Wild men who caught and sang the sun in flight,<br>
-And learn, too late, they grieved it on its way,<br>
-Do not go gentle into that good night.</p>
-
-<p>Grave men, near death, who see with blinding sight<br>
-Blind eyes could blaze like meteors and be gay,<br>
-Rage, rage against the dying of the light.</p>
-
-<p>And you, my father, there on the sad height,<br>
-Curse, bless, me now with your fierce tears, I pray.<br>
-Do not go gentle into that good night.<br>
-Rage, rage against the dying of the light.</p>
-
-<p>— <em>Dylan Thomas, 1914 - 1953</em></p>
-
-
-
+<div class="input-group mt-5 px-3">
+  <input id="search-input" type="text" class="form-control search-box" placeholder="Search posts..">
+  <div class="input-group-append">
+    <span class="input-group-text border border-primary bg-primary text-white">
+      <i class="fas fa-search"></i>
+    </span>
+  </div>
+  <button class="btn btn-outline-primary ml-1" onclick="location.href = '/blog/tags';">
+    <i class="fas fa-tags"></i>
+  </button>
 </div>
+<ul class="px-3" id="results-container"></ul>
+
+<script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  var sjs = SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        searchResultTemplate: '<a href="{url}" class="list-group-item list-group-item-action">{title}</a>',
+        noResultsText: '<li class="list-group-item list-group-item-action disabled">No results found</li>',
+        json: '/search.json'
+      })
+</script>
+
+
+  <ul class="posts-list list-unstyled" role="list">
+    
+    <li class="post-preview">
+      <a href="">
+        <h2 class="post-title">PlaceHolder Project</h2>
+      </a>
+
+      <p class="post-meta">
+        
+        Posted on 
+      </p>
+
+      <div class="post-image post-image-normal">
+        <a href="" aria-label="Thumbnail">
+          <img src="https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png" alt="Post thumbnail">
+        </a>
+      </div>
+
+      <div class="post-entry">
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <a href="" class="post-read-more">[Read More]</a>
+      </div>
+
+    
+  </li>
+</ul>
+</div>
+
   </main>
   <footer class="mt-auto py-3 text-center">
 

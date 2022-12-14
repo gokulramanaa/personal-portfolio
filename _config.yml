@@ -48,19 +48,22 @@ author:
 
 
 ### Posts ###
-permalink: /blog/:title
+# permalink: /blog/:title
 
-
-### Collections ###
 collections:
-  projects:
-    output: true
-    permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                       # For Documentation Only
-  medium_posts:
-    output: true
-    permalink: /blog/:name
+  - medium_posts_json
+
+## Collections ###
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:name
+#   elements:                                             # For Documentation Only
+#     output: true                                       # For Documentation Only
+#   blogposts:
+#     # output: true
+#     permalink: /blogposts/:name
+
 
 ### Disqus ###
 # disqus:
@@ -98,8 +101,9 @@ defaults:
       layout: "element"                                 # For Documentation Only
   - scope:
       path: ""
-      type: "posts"
+      type: "blogposts"
     values:
+      layout: "blog"
       comments: false                                   # Set to true to enable disqus comments
 
 

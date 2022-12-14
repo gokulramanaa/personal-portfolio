@@ -227,6 +227,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
+    json (2.6.1)
     kramdown (2.3.2)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -291,9 +292,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  feedjira
   github-pages
   jekyll (~> 3.9)
   jekyll-display-medium-posts
+  json
+  nokogiri
   webrick (~> 1.7)
 
 BUNDLED WITH
