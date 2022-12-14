@@ -60,7 +60,7 @@
 
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-<a class="nav-item nav-link " href="/web-app/">Awesome Tools</a>
+<a class="nav-item nav-link " href="/web-app/">Tools</a>
 
       <a class="nav-item nav-link " href="/projects/">Projects</a>
 
@@ -101,199 +101,117 @@
         json: '/search.json'
       })
 </script>
-<div class="card-group mt-2">
+
+
+<div class="row">
+  <h2>Get started with Django</h2>
+  <br>
+  <p></p>
+<p>Setting up a Django server can be a daunting task for beginners, but with the right steps and some patience, it can be a breeze. In this post, I will guide you through the process of setting up a Django server and show you some code samples along the way.</p>
+<figure><img alt="" src="https://cdn-images-1.medium.com/max/1024/0*ha2o20ETKWWYynLV"></figure><p>First, make sure you have Python installed on your computer. If not, you can download it from the official Python website. Next, install the Django framework using the following command:</p>
+<pre>pip install django</pre>
+<p>Once Django is installed, create a new project using the following command:</p>
+<p>django-admin startproject my_project</p>
+<p>This will create a new directory called “my_project” with the necessary files and folders for your Django project. Open the directory and run the following command to start the server:</p>
+<p>python manage.py runserver</p>
+<p>Your server is now running on <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>. You can access it in your web browser by typing this address into the address bar.</p>
+<p>Next, we will create a new app within our project. This app will contain the code and functionality for our website. In the terminal, navigate to the “my_project” directory and run the following command:</p>
+<pre>python manage.py startapp my_app</pre>
+<p>This will create a new directory called “my_app” with the necessary files and folders for your app. Inside the app, create a new file called “views.py”. This is where we will write the code for our website’s functionality.</p>
+<p>To create a simple “Hello, World!” page, add the following code to the “views.py” file:</p>
+<pre>from django.http import HttpResponse<br><br>def index(request):<br>  return HttpResponse("Hello, World!")</pre>
+<p>This creates a function called “index” which returns a simple “Hello, World!” message when accessed. Next, we need to map this function to a URL so it can be accessed on our website. In the “my_app” directory, open the “urls.py” file and add the following code:</p>
+<pre>from django.urls import path<br>from . import views<br><br>urlpatterns = [<br>path('', views.index, name='index'),<br>]</pre>
+<p>This maps the “index” function to the root URL of our website. Now, when we access <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>, the “Hello, World!” message will be displayed.</p>
+<p>Now that we have a basic app set up, let’s add some templates and static files. In the “my_app” directory, create a new directory called “templates” and within it, create a new file called “index.html”. This is where we will write the HTML code for our website’s layout.</p>
+<p>Add the following code to the “index.html” file:</p>
+<pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;My Django App&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h1&gt;Hello, World!&lt;/h1&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</pre>
+<p>This creates a simple HTML page with a “Hello, World!” heading. To use this template in our app, open the “views.py” file and update the “index” function as follows:</p>
+<pre>from django.shortcuts import render<br><br>def index(request):<br>return render(request, 'index.html')</pre>
+<p>This uses the “render” function to render the “index.html” template when the “index” function is accessed.</p>
+<p>Finally, we need to add some static files for our app to use. In the “my_app” directory, create a new directory called “static” and within it, create another directory called “my_app”. This is where we can add our CSS and JavaScript files.</p>
+<p>With these steps, you have successfully set up a Django server and created a basic app with templates and static files. You can now continue to develop your app and add more functionality as needed.</p>
+<p>To further develop your app, you can add more views and URL patterns to handle different pages and functionality. For example, to create a page for displaying a list of items, you can add a new view and URL pattern as follows:</p>
+<p>In the “views.py” file, add the following code:</p>
+<pre>from django.shortcuts import render<br>from .models import Item<br><br>def item_list(request):<br>items = Item.objects.all()<br>return render(request, 'item_list.html', {'items': items})<br><br></pre>
+<p>This creates a new view called “item_list” which fetches a list of items from the “Item” model and passes it to the “item_list.html” template for rendering.</p>
+<p>In the “urls.py” file, add the following code:</p>
+<pre>from django.urls import path<br>from . import views<br><br>urlpatterns = [<br>path('', views.index, name='index'),<br>path('items/', views.item_list, name='item_list'),<br>]</pre>
+<p>This maps the “item_list” view to the URL “<a href="http://127.0.0.1:8000/items/">http://127.0.0.1:8000/items/</a>".</p>
+<p>To display the list of items in the template, create a new file called “item_list.html” in the “templates” directory and add the following code:</p>
+<pre>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>    &lt;title&gt;My Django App&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>    &lt;h1&gt;Item List&lt;/h1&gt;<br>    &lt;ul&gt;<br>        {% for item in items %}<br>        &lt;li&gt;{{ item.name }}&lt;/li&gt;<br>        {% endfor %}<br>    &lt;/ul&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</pre>
+<p>This uses a for loop to iterate through the list of items and display each item’s name in a list.</p>
+<p>With these steps, you have added a new view and URL pattern for displaying a list of items. You can continue to develop your app and add more functionality as needed.</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=2c9c51031cc0" width="1" height="1" alt="">
+  <br>
+  
+
+<div class="row">
+  <h2>Knit Flask &amp; Nginx reverse proxy</h2>
+  <br>
+  <p></p>
+<ol>
+<li>First, ensure that you have installed Flask and nginx on your server.</li>
+<li>Next, create a Flask app with a basic route that returns a simple message.</li>
+<li>Create a file called “flask_app.py” and place the following code inside:</li>
+</ol>
+<pre>from flask import Flask app = Flask(name)<br>@app.route('/') def hello(): return 'Hello from Flask!'<br>if name == 'main': app.run()</pre>
+<p>4. In the same directory, create a file called “app.conf” and place the following code inside:</p>
+<pre><br>server { listen 80; server_name yourdomain.com;<br><br>  location / {<br>      proxy_pass http://127.0.0.1:5000;<br>      proxy_set_header Host $host;<br>      proxy_set_header X-Real-IP $remote_addr;<br>  }<br>}</pre>
+<p>5. Replace “yourdomain.com” with your actual domain name in the “app.conf” file.</p>
+<p>6. Open up your nginx configuration file, typically found at /etc/nginx/nginx.conf, and add the following line at the end:</p>
+<pre>include /path/to/app.conf;</pre>
+<p>7. Restart nginx with the command “service nginx restart”.</p>
+<p>8. Start your Flask app with the command “python flask_app.py”.</p>
+<p>9. Finally, navigate to your domain in a web browser and you should see the message “Hello from Flask!”</p>
+<p>10. That’s it! Your Flask app is now running with nginx as a reverse proxy.</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=5a7d65ccf912" width="1" height="1" alt="">
+  <br>
+  
+
+<div class="row">
+  <h2>Thoughts on ChatGPT</h2>
+  <br>
+  <p></p>
+<p>ChatGPT is a cutting-edge language model developed by OpenAI. It is a variant of the popular GPT-3 model, which has been trained on a massive amount of text data to generate human-like responses to input.</p>
+<p>One of the key features of ChatGPT is its ability to maintain coherence and context in conversations. This means that it is able to understand the context of a conversation and provide appropriate responses, even when the conversation veers off-topic.</p>
+<p>For example, if you were to start a conversation with ChatGPT by asking about the weather, it might respond by giving a brief forecast. If you then asked it about its favorite food, it might respond with a list of its favorite dishes. And if you asked it about a completely unrelated topic, such as the history of the printing press, it would be able to provide a brief summary of the invention and its impact on society.</p>
+<p>This ability to maintain coherence and context in conversation sets ChatGPT apart from other language models, which often struggle to provide appropriate responses when the conversation strays from the initial topic.</p>
+<p>Another standout feature of ChatGPT is its ability to generate personalized responses. It can be trained on specific topics or given information about an individual, allowing it to provide more tailored responses.</p>
+<p>For example, if you were to provide ChatGPT with information about your interests and hobbies, it would be able to generate responses that align with those interests. This makes it an ideal tool for businesses looking to provide personalized customer service, or for individuals looking to have more engaging conversations with their friends and family.</p>
+<p>Overall, ChatGPT is a powerful and versatile language model that has the potential to revolutionize the way we interact with technology. Its ability to maintain coherence and context in conversation, as well as its ability to generate personalized responses, makes it a valuable tool for a wide range of applications.</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=d2fdeecc6171" width="1" height="1" alt="">
+  <br>
+  
+
+<div class="row">
+  <h2>The Benefits of Using a Large Language Model in Your Business</h2>
+  <br>
+  <p></p>
+<p>As a business owner, you’re always looking for ways to improve your operations and get ahead of the competition. One way to do this is by utilizing a large language model, such as GPT-3, in your daily operations. In this post, we’ll explore the benefits of using a large language model and how it can help your business.</p>
+<p>First, let’s define what a large language model is. A large language model is a machine learning algorithm that has been trained on a massive amount of data, allowing it to understand and generate natural language with a high degree of accuracy. This type of model can be used for a variety of tasks, including language translation, text summarization, and even generating creative content.</p>
+<p>One of the biggest benefits of using a large language model in your business is increased efficiency. With the ability to understand and generate natural language, a large language model can help automate many of the tedious and time-consuming tasks that are currently done by humans. For example, a large language model could be used to automatically generate reports or summarize long documents, freeing up your employees to focus on more important tasks.</p>
+<p>Another benefit of using a large language model has improved accuracy. Because these models are trained on such a large amount of data, they are able to accurately understand and generate natural language with a high degree of accuracy. This can be especially useful for tasks that require a high level of precision, such as language translation or data analysis.</p>
+<p>In addition to increased efficiency and improved accuracy, using a large language model can also improve the business.</p>
+<figure><img alt="" src="https://cdn-images-1.medium.com/max/1024/0*kvehMwjiHd4cfaU4.png"></figure><p>PS — This was created by ChatGPT</p>
+<p>#chatgpt</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=fe7d37d36726" width="1" height="1" alt="">
+  <br>
+  
+
+<div class="row">
+  <h2>First blog</h2>
+  <br>
+  <p></p>
+<p>First blog</p>
+<p>Bucket from list</p>
+<img src="https://medium.com/_/stat?event=post.clientViewed&amp;referrerSource=full_rss&amp;postId=5acb1318394e" width="1" height="1" alt="">
+  <br>
+  
+
+</div>
 
   
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/digital-minimalism" class="post card border border-">
-    <div class="card-body text-themed">
-      <h3 class="card-title">Digital Minimalism</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-dark">Social Media</span>
-        
-        <span class="badge badge-dark">Minimalism</span>
-        
-        <span class="badge badge-dark">Technology</span>
-        
-      </p>
-      <p class="card-text">Minimalism is the art of knowing how much is just enough. Digital minimalism applies this idea to our personal technology. It’s the key to living a focused life in an increasingly noisy world.</p>
-    </div>
-    <div class="card-footer text-themed">
-      20 February 2019
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/learn-react-js" class="post card border border-primary">
-    <div class="card-body text-themed">
-      <h3 class="card-title">Learn React.js in 5 minutes</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-primary">React</span>
-        
-        <span class="badge badge-primary">JavaScript</span>
-        
-        <span class="badge badge-primary">Web Development</span>
-        
-      </p>
-      <p class="card-text">A quick introduction to the popular JavaScript library.</p>
-    </div>
-    <div class="card-footer text-themed">
-      15 February 2019
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/clean-coding" class="post card bg-info">
-    <div class="card-body text-white">
-      <h3 class="card-title">Clean Coding</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-info">Software Development</span>
-        
-        <span class="badge badge-light text-info">Clean Code</span>
-        
-      </p>
-      <p class="card-text">These four “clean code” tips will dramatically improve your engineering team’s productivity</p>
-    </div>
-    <div class="card-footer text-white">
-      10 December 2018
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/what-the-heck-is-a-callback" class="post card bg-danger">
-    <div class="card-body text-white">
-      <h3 class="card-title">What the heck is a Callback?</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-danger">JavaScript</span>
-        
-        <span class="badge badge-light text-danger">Nodejs</span>
-        
-        <span class="badge badge-light text-danger">Web Development</span>
-        
-      </p>
-      <p class="card-text">Learn and understand the basics of callbacks in just 6 minutes with easy examples.</p>
-    </div>
-    <div class="card-footer text-white">
-      01 December 2018
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/four-lessons-after-eleven-years-in-silicon-valley" class="post card bg-success">
-    <div class="card-body text-white">
-      <h3 class="card-title">4 Lessons After 11 Years in Silicon Valley</h3>
-      <p class="card-text">
-        
-      </p>
-      <p class="card-text">On the realities of opportunity, success, reputation, and relationships in tech.</p>
-    </div>
-    <div class="card-footer text-white">
-      09 May 2018
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/github-flow" class="post card bg-primary">
-    <div class="card-body text-white">
-      <h3 class="card-title">GitHub Flow</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-primary">GitHub</span>
-        
-        <span class="badge badge-light text-primary">Workflow</span>
-        
-      </p>
-      <p class="card-text">GitHub Flow is a lightweight, branch-based workflow that supports teams and projects where deployments are made regularly. This guide explains how and why GitHub Flow works.</p>
-    </div>
-    <div class="card-footer text-white">
-      01 January 2017
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/a-better-hello-world" class="post card bg-dark">
-    <div class="card-body text-white">
-      <h3 class="card-title">A better Hello World</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-dark">Software Development</span>
-        
-      </p>
-      <p class="card-text">A different “hello world” to demonstrate language features better.</p>
-    </div>
-    <div class="card-footer text-white">
-      23 July 2016
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/do-not-go-gentle-into-that-good-night" class="post card bg-light">
-    <div class="card-body text-themed">
-      <h3 class="card-title">Do not go gentle into that good night</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-dark">Poetry</span>
-        
-      </p>
-      <p class="card-text"></p>
-<p>Do not go gentle into that good night,<br> Old age should burn and rave at close of day;<br> Rage, rage against the dying<small><i>  read more...</i></small></p>
-    </div>
-    <div class="card-footer text-themed">
-      17 April 2016
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="/blog/what-is-version-control" class="post card bg-secondary">
-    <div class="card-body text-white">
-      <h3 class="card-title">What is version control?</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-secondary">Version Control</span>
-        
-      </p>
-      <p class="card-text">Benefits of version control and version control systems.</p>
-    </div>
-    <div class="card-footer text-white">
-      09 February 2016
-    </div>
-  </a>
-</div>
-  
-    <div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
-  <a href="https://blog.usejournal.com/how-to-undo-your-git-failure-b76e31ecac74" class="post card bg-warning" target="_blank">
-    <div class="card-body text-white">
-      <h3 class="card-title">How to undo your git failure?</h3>
-      <p class="card-text">
-        
-        <span class="badge badge-light text-warning">External Post</span>
-        
-        <span class="badge badge-light text-warning">Git</span>
-        
-      </p>
-      <p class="card-text">Using `git reflog` and `git reset` to save your code.</p>
-    </div>
-    <div class="card-footer text-white">
-      25 September 2015
-    </div>
-  </a>
-</div>
-  
-  
-</div>
-  </main>
   <footer class="mt-auto py-3 text-center">
 
   <small class="text-muted mb-2">
@@ -304,15 +222,15 @@
   <div class="container-fluid justify-content-center">
 <a class="social mx-1" href="mailto:gokul_ramanan@hotmail.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
       <i class="fas fa-envelope fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
+    </a><a class="social mx-1" href="https://www.facebook.com/gokulramanaa" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
       <i class="fab fa-facebook fa-1x"></i>
     </a><a class="social mx-1" href="https://www.github.com/gokulramanaa" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
       <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
+    </a><a class="social mx-1" href="https://www.linkedin.com/in/gokulramanaa" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
       <i class="fab fa-linkedin-in fa-1x"></i>
-    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
+    </a><a class="social mx-1" href="https://medium.com/@oneheart1" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
       <i class="fab fa-medium fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
+    </a><a class="social mx-1" href="https://www.twitter.com/one__heart_" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
       <i class="fab fa-twitter fa-1x"></i>
     </a>
 
@@ -347,6 +265,9 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
 </script>
-</body>
+</div>
+</div>
+</div>
+</div></main></body>
 
 </html>

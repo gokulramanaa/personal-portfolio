@@ -57,8 +57,10 @@ collections:
     output: true
     permalink: /projects/:name
   elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
-
+    output: true                                       # For Documentation Only
+  medium_posts:
+    output: true
+    permalink: /blog/:name
 
 ### Disqus ###
 # disqus:
