@@ -50,19 +50,17 @@ author:
 ### Posts ###
 # permalink: /blog/:title
 
-collections:
-  - medium_posts_json
 
-## Collections ###
-# collections:
-#   projects:
-#     output: true
-#     permalink: /projects/:name
-#   elements:                                             # For Documentation Only
-#     output: true                                       # For Documentation Only
-#   blogposts:
-#     # output: true
-#     permalink: /blogposts/:name
+# Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:                                             # For Documentation Only
+    output: true                                       # For Documentation Only
+  medium_posts:
+    output: true
+    permalink: /blog/:name
 
 
 ### Disqus ###
@@ -87,7 +85,7 @@ collections:
 #   description: "Support me on Buy me a coffee!"
 
 
-### Defaults for collections ###
+## Defaults for collections ###
 defaults:
   - scope:
       path: ""
@@ -99,13 +97,6 @@ defaults:
       type: "elements"                                  # For Documentation Only
     values:                                             # For Documentation Only
       layout: "element"                                 # For Documentation Only
-  - scope:
-      path: ""
-      type: "blogposts"
-    values:
-      layout: "blog"
-      comments: false                                   # Set to true to enable disqus comments
-
 
 ### Exclude from processing ###
 exclude:

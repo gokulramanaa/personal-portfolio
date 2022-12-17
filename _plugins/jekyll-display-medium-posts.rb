@@ -3,13 +3,16 @@ require 'net/http'
 require 'json'
 require 'nokogiri'
 require 'feedjira'
+require 'liquid'
 module Jekyll
   class JekyllDisplayMediumPosts < Generator
     safe true
     priority :high
+
+Feedjira.logger.level = Logger::FATAL
 def generate(site)
-      jekyll_coll = Jekyll::Collection.new(site, 'medium_posts_json')
-      site.collections['medium_posts_json'] = jekyll_coll
+      jekyll_coll = Jekyll::Collection.new(site, 'medium_posts')
+      site.collections['medium_posts'] = jekyll_coll
       uri = URI("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gokulramanaa")
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
@@ -19,12 +22,9 @@ def generate(site)
       data = JSON.parse(response.read_body)
       data['items'].each do |item|
         title = item['title']
-        path = "./_medium_posts_json/" + title + ".md"
+        path = "./_medium_posts/" + title + ".md"
         path = site.in_source_dir(path)
         doc = Jekyll::Document.new(path, { :site => site, :collection => jekyll_coll })
-        # puts path
-        # puts "====== #{title} ======"
-        # puts "#{item['link']}"
         doc.data['title'] = title;
         doc.data['image'] = item['thumbnail'];
         doc.data['link'] = item['link'];
@@ -32,9 +32,33 @@ def generate(site)
         doc.data['categories'] = item['categories'];
         html_document = Nokogiri::HTML(item['description']);
         doc.data['description'] = html_document.search('p').to_html;
-        puts "====== #{html_document} ======"
         jekyll_coll.docs << doc
       end
     end
   end
 end
+
+# require 'feedjira'
+# module Jekyll
+#   class MediumPostDisplay < Generator
+#     safe true
+#     priority :high
+# def generate(site)
+#       jekyll_coll = Jekyll::Collection.new(site, 'medium_posts')
+#       site.collections['medium_posts'] = jekyll_coll
+# Feedjira::Feed.fetch_and_parse("https://medium.com/feed/@gokulramanaa").entries.each do |e|
+#         p "Title: #{e.title}, published on Medium #{e.url} #{e}"
+#         title = e[:title]
+#         content = e[:content]
+#         guid = e[:url]
+#         path = "./_medium_posts/" + title + ".md"
+#         path = site.in_source_dir(path)
+#         doc = Jekyll::Document.new(path, { :site => site, :collection => jekyll_coll })
+#         doc.data['title'] = title;
+#         doc.data['feed_content'] = content;
+#         jekyll_coll.docs << doc
+#         puts {{ doc || inspect }}
+#       end
+#     end
+#   end
+# end

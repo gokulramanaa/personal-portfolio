@@ -297,6 +297,7 @@ DEPENDENCIES
   jekyll (~> 3.9)
   jekyll-display-medium-posts
   json
+  kramdown-parser-gfm
   nokogiri
   webrick (~> 1.7)
 
