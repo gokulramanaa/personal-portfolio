@@ -5,18 +5,10 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # frozen_string_literal: true
 
-# gem "jekyll", "~> 4.3"
-
-gem "webrick", "~> 1.7"
-
-gem "jekyll", "~> 3.9"
-gem "kramdown-parser-gfm"
+source "https://rubygems.org"
 
 gem "feedjira"
 gem 'json'
 gem 'nokogiri'
-
-
-group :jekyll_plugins do
-    gem "jekyll-display-medium-posts"
-end
+gem "webrick", "~> 1.7"
+gemspec
