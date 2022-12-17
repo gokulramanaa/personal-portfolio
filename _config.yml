@@ -31,6 +31,7 @@ navbar-links:
   Home: "index"
   Blog: "blogposts"
   Projects: "projects"
+  Tools: "tools"
   About: "about"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -293,6 +294,7 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - pages/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
