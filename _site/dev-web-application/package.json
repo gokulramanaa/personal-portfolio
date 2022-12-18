@@ -27,8 +27,8 @@
     "test": "react-scripts test",
     "predeploy": "yarn run build",
     "purge": "rm -rf ../web-app/static && cp -fR ./build/* ../web-app",
-    "frontmatter": `echo "---\ntitle: Tools\nlayout: null\npermalink: '/tools'\n---\n" | cat - ../web-app/index.html > temp && mv temp ../web-app/index.html`,
-    "deploy": "echo 'gokulramanan.me' > ../CNAME && export MEDIUM_USERNAME=gokulramanaa && npm run purge && npm run frontmatter && gh-pages -b gh-pages -d ../",
+    "frontmatter": "echo \"---\ntitle: Tools\nlayout: null\npermalink: '/tools'\n---\n\" | cat - ../web-app/index.html > temp && mv temp ../web-app/index.html",
+    "deploy": "echo 'gokulramanan.me' > ../CNAME && npm run purge && npm run frontmatter && gh-pages -b gh-pages -d ../",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
