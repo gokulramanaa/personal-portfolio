@@ -299,6 +299,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - CONTRIBUTING.md
+  - "*.log"
+  - node_modules
+  - dev-*
+  - node_modules*
+  - notes
 
 plugins:
   - jekyll-paginate
