@@ -13,3 +13,8 @@ just update whole repo and main branch
 
 """ npm run deploy inside web-dev-app
 build and deploy to gh-pages
+
+
+""" jekyll deploy 
+    '' this will generate posts and have upto date jekyll and then run react to deploy
+JEKYLL_ENV=production bundle exec jekyll build
