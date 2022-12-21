@@ -9,3 +9,4 @@ gem "webrick", "~> 1.7"
 gemspec
 
 
+gem "jemoji", "~> 0.13.0"

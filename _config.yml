@@ -31,7 +31,6 @@ navbar-links:
   Home: "index"
   Blog: "blogposts"
   Projects: "projects"
-  Tools: "tools"
   About: "about"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -294,17 +293,10 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
-  - pages/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - CONTRIBUTING.md
-  - "*.log"
-  - node_modules
-  - dev-*
-  - node_modules*
-  - notes
 
 plugins:
   - jekyll-paginate

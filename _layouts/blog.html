@@ -2,7 +2,7 @@
 layout: page
 ---
 <ul class="posts-list list-unstyled" role="list">
-  {% for e in site.medium_posts %}
+  {% for e in site.medium_posts_json %}
   <li class="post-preview">
     <a href="{{ e.link | absolute_url }}">
       <h2 class="post-title">{{ e.title | strip_html }}</h2>

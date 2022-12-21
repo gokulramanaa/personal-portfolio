@@ -133,6 +133,7 @@ DEPENDENCIES
   beautiful-jekyll-theme!
   bundler (>= 1.16)
   feedjira
+  jemoji (~> 0.13.0)
   json
   nokogiri
   rake (~> 12.0)

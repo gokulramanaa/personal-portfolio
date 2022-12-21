@@ -1,13 +1,13 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 weight: 3
 ---
 
 <!-- # **About Me** -->
 
-Hi I am **{{ site.author }}** :wave:,<br>
+Hi I am **{{ site.author.name }}** :wave:,<br>
 I’m a technology enthusiast who takes joy in challenging new heights and exploring the boundless possibilities. Working with leading tech companies like IBM, Robert Bosch and State Street Corporation in an array of roles, kept my burning passion for IT going. The exponential increase of new technologies while daunting excites me greatly. Fidgeting with stuff is my forte, mastering them is my goal.
 
 My journey began with IBM, where I have got solid experience in Unix Shell Scripting, Java, SQL, DB2. Next, in Robert Bosch, I developed several dashboard applications and automation tool frameworks for Data Analysis and ETL tasks, using Python, VBA macros, Unix Shell Scripting, and SQL. 
